@@ -1,0 +1,15 @@
+
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.example.truebond_frontend",
+      "sha256_cert_fingerprints": [
+        "B7:B5:0A:57:9B:1D:00:B2:00:CC:11:53:2F:C8:AE:35:DE:24:93:72:6C:2B:AB:64:03:87:39:80:45:35:38:BF"
+      ]
+    }
+  }
+]
