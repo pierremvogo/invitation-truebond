@@ -4,8 +4,8 @@ Interface statique responsive, sans framework ni dépendance CDN.
 
 ## À faire AVANT de déployer
 
-1. Renseigner `apiBaseUrl` dans `config.js` (URL HTTPS publique de NestJS, préfixe `/api` inclus).
-2. Les chemins `GET /public/invitations/:token` et `POST /public/invitations/:token/answer` dans `app.js` sont **proposés**, non vérifiés. Les remplacer par les routes réelles de `invitation_repository.dart` / du backend. Vérifier aussi les formes JSON `{rewardXaf}` et `{isCorrect}`.
+1. `apiBaseUrl` est configuré sur `https://trubond-backend.onrender.com/api` dans `config.js`. Vérifier que le backend est bien accessible publiquement.
+2. Les routes sont celles du code NestJS/Flutter fourni : `GET /api/invitations/resolve?token=...` et `POST /api/invitations/submit-answer` avec `{token, phone}`. Le résultat est contrôlé avec `testId`, `result`, `isCorrect`, `status`.
 3. Configurer CORS du backend pour `https://invitation-truebond.onrender.com` (méthodes GET/POST, Content-Type, sans credentials si API token-based). Ne jamais placer de secret serveur dans les fichiers statiques.
 4. Vérifier le package Android et la signature SHA256 dans `.well-known/assetlinks.json` (actuellement valeurs héritées du ZIP). Configurer Android intent filters et éventuellement Apple AASA. Tester sur un appareil réel.
 5. Le serveur statique doit servir `/.well-known/assetlinks.json` avec HTTP 200, `application/json`, sans redirection. Tester les rewrites `_redirects` sur l'hébergeur Render utilisé.
@@ -21,3 +21,10 @@ Interface statique responsive, sans framework ni dépendance CDN.
 - `.well-known/assetlinks.json` : association Android existante (à vérifier)
 
 Ne pas considérer ce ZIP comme intégré fonctionnellement au backend tant que les routes et les réponses n'ont pas été vérifiées.
+
+## Vérifications avant publication
+- L’API et CORS n’ont pas été testés en direct ; effectuer un essai avec une invitation Sandbox valide.
+- Ne pas exposer le token dans des captures, journaux, ou outils d’analyse.
+- Le formulaire web actuel accepte les numéros camerounais +237 uniquement ; le formulaire Flutter permet plusieurs pays.
+- Le format canonique généré par `buildInvitationUrl` est `/?token=TOKEN`.
+- Vérifier la cohérence de `status` et `result` dans le service (actuellement SUCCESS/FAILURE).
