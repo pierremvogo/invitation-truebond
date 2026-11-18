@@ -9,9 +9,9 @@
   const token = routeMatch?.[1] || params.get('token');
   const validToken = typeof token === 'string' && /^[A-Za-z0-9_-]{43}$/.test(token);
   const apiBase = (window.TRUEBOND_CONFIG?.apiBaseUrl || '').replace(/\/$/, '');
-  // Ces chemins sont des contrats PROPOSÉS : confirmer les routes réelles NestJS avant déploiement.
-  const resolvePath = t => `/public/invitations/${encodeURIComponent(t)}`;
-  const answerPath = t => `/public/invitations/${encodeURIComponent(t)}/answer`;
+  // Routes confirmées par InvitationRepository et PublicInvitationsController.
+  const resolvePath = t => `/invitations/resolve?token=${encodeURIComponent(t)}`;
+  const answerPath = '/invitations/submit-answer';
   let submitted = false;
   const fail = (title, detail, retry = true) => { $('errorTitle').textContent = title; $('errorText').textContent = detail; $('retryBtn').classList.toggle('hidden', !retry); show('errorScreen'); };
   const request = async (path, options = {}) => {
@@ -44,9 +44,12 @@
     const msg = $('formMessage'); msg.classList.add('hidden');
     if (!/^6\d{8}$/.test(national)) { msg.textContent = 'Saisissez un numéro camerounais valide à 9 chiffres commençant par 6.'; msg.classList.remove('hidden'); return; }
     const btn = $('submitBtn'); btn.disabled = true; btn.textContent = 'Vérification en cours…';
+    let lastErrorStatus = null;
     try {
-      const data = await request(answerPath(token), {method:'POST', body:JSON.stringify({phone:'+237'+national})});
-      if (typeof data.isCorrect !== 'boolean') throw new Error('Uncertain server response');
+      const data = await request(answerPath, {method:'POST', body:JSON.stringify({token,phone:'+237'+national})});
+      if (typeof data.testId !== 'string' || !['SUCCESS','FAILURE'].includes(data.result) ||
+          data.status !== data.result || typeof data.isCorrect !== 'boolean' ||
+          data.isCorrect !== (data.result === 'SUCCESS')) throw new Error('Uncertain server response');
       submitted = true;
       $('resultIcon').textContent = data.isCorrect ? '✓' : '×';
       $('resultIcon').classList.toggle('error', !data.isCorrect);
@@ -54,12 +57,13 @@
       $('resultText').textContent = data.isCorrect ? 'Votre réponse a été validée avec succès.' : 'Le numéro saisi ne correspond à aucun des numéros attendus.';
       show('resultScreen');
     } catch (err) {
+      lastErrorStatus = err.status ?? null;
       if ([400,403,404,410,409,429].includes(err.status)) {
         const messages = {400:'Le numéro ou le lien est invalide.',403:'Cette invitation n’est plus accessible.',404:'Cette invitation est invalide.',410:'Cette invitation a expiré.',409:'Ce test ne peut plus recevoir de réponse.',429:'Trop de tentatives. Veuillez patienter.'};
         msg.textContent = messages[err.status]; msg.classList.remove('hidden');
         btn.disabled = err.status === 409 || err.status === 410;
       } else { submitted = true; show('uncertainScreen'); }
-    } finally { btn.textContent = 'Valider ma réponse →'; if (!submitted && !btn.disabled) btn.disabled = false; }
+    } finally { btn.textContent = 'Valider ma réponse →'; if (!submitted && ![409,410].includes(lastErrorStatus)) btn.disabled = false; }
   });
   load();
 })();
