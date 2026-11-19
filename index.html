@@ -1,28 +1,671 @@
 <!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#f7f8f5"><meta name="referrer" content="no-referrer">
-  <title>Votre invitation | TRUEBOND</title>
-  <meta name="description" content="Accédez à votre invitation TRUEBOND en toute simplicité.">
-  <style>
-    :root{--ink:#182b28;--muted:#62736c;--green:#176b52;--green-dark:#10503e;--mint:#eaf5ed;--line:#e0e8e1;--bg:#f7f8f5;--white:#fff;--danger:#a63b36;--shadow:0 24px 65px rgba(24,55,43,.09)}
-    *{box-sizing:border-box}html{min-height:100%;background:var(--bg)}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:radial-gradient(circle at 6% 15%,#e7f3e8 0,transparent 36%),radial-gradient(circle at 96% 90%,#f1f0e5 0,transparent 36%),var(--bg);min-height:100vh}button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.6}a{color:var(--green)}.wrap{max-width:1100px;margin:auto;padding:28px 28px 24px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px}.brand{display:flex;align-items:center;gap:12px;font-size:21px;font-weight:850;letter-spacing:.055em}.brandmark{width:38px;height:38px;border-radius:13px;background:var(--green);display:grid;place-items:center;color:white;font-size:23px;font-weight:700}.secure{font-size:12px;font-weight:650;color:var(--green);background:#e5f1e9;padding:10px 13px;border-radius:99px}.layout{display:grid;grid-template-columns:.92fr 1.08fr;gap:60px;align-items:center;min-height:calc(100vh - 150px);padding:42px 0}.intro{padding:20px 0}.eyebrow{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--green);margin-bottom:20px}.intro h1{font-size:clamp(38px,5vw,62px);letter-spacing:-.055em;line-height:1.08;margin:0 0 22px;font-weight:800}.intro p{font-size:17px;line-height:1.8;color:var(--muted);max-width:420px;margin:0 0 30px}.feature{display:flex;align-items:center;gap:12px;font-size:14px;color:#3e5d50;margin:15px 0}.tick{background:#d9ebde;color:var(--green);border-radius:50%;width:27px;height:27px;display:grid;place-items:center;font-weight:800}.panel{background:var(--white);border:1px solid #e7eee8;border-radius:28px;box-shadow:var(--shadow);padding:clamp(24px,4vw,42px);position:relative;overflow:hidden}.panel:before{content:"";position:absolute;inset:0 0 auto;height:5px;background:linear-gradient(90deg,#176b52,#8fc4a4)}.step{font-size:12px;color:var(--green);font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin:8px 0 12px}.panel h2{font-size:27px;letter-spacing:-.04em;line-height:1.2;margin:0 0 12px}.sub{color:var(--muted);font-size:14px;line-height:1.7;margin:0 0 25px}.reward{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--mint);padding:18px 20px;border:1px solid #d9e9dd;border-radius:16px;margin:22px 0}.reward span{font-size:13px;color:#456a58}.reward strong{font-size:24px;color:var(--green);letter-spacing:-.04em}.label{display:block;font-size:13px;font-weight:750;margin-bottom:10px}.phone{display:flex;align-items:center;border:1.5px solid #cbd9d0;border-radius:13px;overflow:hidden;transition:.2s}.phone:focus-within{border-color:var(--green);box-shadow:0 0 0 4px #e9f5ed}.dial{padding:16px 13px;background:#f7faf7;border-right:1px solid var(--line);font-weight:700;white-space:nowrap}.phone input{border:0;outline:0;width:100%;min-width:0;padding:16px 13px;background:transparent;color:var(--ink)}.hint{font-size:12px;color:var(--muted);line-height:1.6;margin:10px 0 20px}.btn{width:100%;border:0;border-radius:13px;background:var(--green);color:white;min-height:54px;font-weight:750;transition:.2s}.btn:hover:not(:disabled){background:var(--green-dark);transform:translateY(-1px)}.btn.secondary{background:#eef5f0;color:var(--green);margin-top:10px}.status{border-radius:13px;padding:15px 16px;font-size:14px;line-height:1.6;background:#f1f6f2;color:#315844;margin:16px 0}.status.error{background:#fff0ee;color:var(--danger)}.status.warn{background:#fff6e5;color:#79500b}.icon{width:60px;height:60px;border-radius:18px;background:var(--mint);color:var(--green);display:grid;place-items:center;font-size:30px;margin-bottom:20px}.icon.error{background:#fff0ee;color:var(--danger)}.hidden{display:none!important}.spinner{width:30px;height:30px;border:3px solid #d9e9dd;border-top-color:var(--green);border-radius:50%;animation:spin .8s linear infinite;margin-bottom:20px}@keyframes spin{to{transform:rotate(360deg)}}.footer{border-top:1px solid #dfe7df;padding-top:20px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:12px;color:#77877d}.tiny{font-size:12px;color:var(--muted);line-height:1.6;text-align:center;margin:18px 0 0}.app-link{display:inline-block;margin-top:14px;font-size:13px;font-weight:700;text-decoration:none}.screen{animation:enter .25s ease}@keyframes enter{from{opacity:.4;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}@media(max-width:800px){.wrap{padding:18px 18px 24px}.layout{display:flex;flex-direction:column;align-items:stretch;gap:22px;min-height:0;padding:38px 0}.intro{padding:0}.intro h1{font-size:39px;margin-bottom:12px}.intro p{font-size:14px;line-height:1.7;margin-bottom:0}.feature-list{display:none}.panel{border-radius:22px;padding:26px 22px}.panel h2{font-size:24px}.secure{font-size:11px}.brand{font-size:18px}.footer{margin-top:24px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
-  </style>
-</head>
-<body>
-<div class="wrap">
-<header class="top"><div class="brand"><div class="brandmark" aria-hidden="true">✓</div>TRUEBOND</div><div class="secure">🔒 Accès sécurisé</div></header>
-<main class="layout">
-<section class="intro"><div class="eyebrow">Une invitation personnelle</div><h1>La confiance<br>commence ici.</h1><p>Vous avez reçu une invitation TRUEBOND. Découvrez votre test et répondez en quelques instants, directement depuis votre navigateur.</p><div class="feature-list"><div class="feature"><span class="tick">✓</span> Aucun compte requis pour répondre</div><div class="feature"><span class="tick">✓</span> Une expérience simple et confidentielle</div><div class="feature"><span class="tick">✓</span> Une réponse enregistrée de façon sécurisée</div></div></section>
-<section class="panel" aria-live="polite">
-<div id="loading" class="screen"><div class="spinner" aria-hidden="true"></div><div class="step">Vérification</div><h2>Nous préparons votre invitation</h2><p class="sub">Vérification du lien et de la disponibilité du test…</p></div>
-<div id="formScreen" class="screen hidden"><div class="step">Votre test TRUEBOND</div><h2>À vous de répondre.</h2><p class="sub">Prenez un instant pour saisir le numéro demandé. Votre réponse sera vérifiée de manière sécurisée.</p><div class="reward"><span>Récompense annoncée</span><strong id="reward">—</strong></div><form id="answerForm" novalidate><label class="label" for="phone">Numéro de téléphone</label><div class="phone"><span class="dial">🇨🇲 +237</span><input id="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="6XX XXX XXX" maxlength="18" required aria-describedby="phoneHelp"></div><p id="phoneHelp" class="hint">Saisissez le numéro camerounais demandé, sans l'indicatif +237.</p><div id="formMessage" class="status error hidden" role="alert"></div><button class="btn" id="submitBtn" type="submit">Valider ma réponse →</button></form><p class="tiny">Une seule réponse peut être enregistrée pour cette invitation.</p></div>
-<div id="resultScreen" class="screen hidden"><div id="resultIcon" class="icon">✓</div><div class="step">Résultat du test</div><h2 id="resultTitle">Réponse enregistrée</h2><p class="sub" id="resultText"></p><div class="status">Cette invitation ne peut plus recevoir de nouvelle réponse.</div></div>
-<div id="errorScreen" class="screen hidden"><div class="icon error">!</div><div class="step">Invitation indisponible</div><h2 id="errorTitle">Impossible d'ouvrir ce lien</h2><p class="sub" id="errorText">Vérifiez votre invitation et réessayez.</p><button class="btn secondary" id="retryBtn" type="button">Réessayer</button></div>
-<div id="uncertainScreen" class="screen hidden"><div class="icon">?</div><div class="step">Vérification nécessaire</div><h2>Votre réponse a peut-être été reçue</h2><p class="sub">Nous n'avons pas pu confirmer le résultat de votre envoi. Pour éviter une double réponse, ne soumettez pas à nouveau. Contactez la personne qui vous a invité pour vérifier le statut du test.</p></div>
-</section></main>
-<footer class="footer"><span>© <span id="year"></span> TRUEBOND. Tous droits réservés.</span><span>Votre confiance, notre priorité.</span></footer>
-</div>
-<script src="/config.js"></script><script src="/app.js"></script>
-</body></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#f7f8f5" />
+    <meta name="referrer" content="no-referrer" />
+
+    <title>Votre invitation | TRUEBOND</title>
+    <meta
+      name="description"
+      content="Répondez à votre invitation TRUEBOND en renseignant le numéro de téléphone de la personne que vous pensez être votre partenaire."
+    />
+
+    <style>
+      :root {
+        --ink: #182b28;
+        --muted: #62736c;
+        --green: #176b52;
+        --green-dark: #10503e;
+        --mint: #eaf5ed;
+        --line: #e0e8e1;
+        --bg: #f7f8f5;
+        --white: #fff;
+        --danger: #a63b36;
+        --shadow: 0 24px 65px rgba(24, 55, 43, 0.09);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        min-height: 100%;
+        background: var(--bg);
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 6% 15%, #e7f3e8 0, transparent 36%),
+          radial-gradient(circle at 96% 90%, #f1f0e5 0, transparent 36%),
+          var(--bg);
+        min-height: 100vh;
+      }
+
+      button,
+      input {
+        font: inherit;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      button:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+      }
+
+      a {
+        color: var(--green);
+      }
+
+      .wrap {
+        max-width: 1100px;
+        margin: auto;
+        padding: 28px 28px 24px;
+      }
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 21px;
+        font-weight: 850;
+        letter-spacing: 0.055em;
+      }
+
+      .brandmark {
+        width: 38px;
+        height: 38px;
+        border-radius: 13px;
+        background: var(--green);
+        display: grid;
+        place-items: center;
+        color: white;
+        font-size: 23px;
+        font-weight: 700;
+      }
+
+      .secure {
+        font-size: 12px;
+        font-weight: 650;
+        color: var(--green);
+        background: #e5f1e9;
+        padding: 10px 13px;
+        border-radius: 99px;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 0.92fr 1.08fr;
+        gap: 60px;
+        align-items: center;
+        min-height: calc(100vh - 150px);
+        padding: 42px 0;
+      }
+
+      .intro {
+        padding: 20px 0;
+      }
+
+      .eyebrow {
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--green);
+        margin-bottom: 20px;
+      }
+
+      .intro h1 {
+        font-size: clamp(38px, 5vw, 62px);
+        letter-spacing: -0.055em;
+        line-height: 1.08;
+        margin: 0 0 22px;
+        font-weight: 800;
+      }
+
+      .intro p {
+        font-size: 17px;
+        line-height: 1.8;
+        color: var(--muted);
+        max-width: 420px;
+        margin: 0 0 30px;
+      }
+
+      .feature {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 14px;
+        color: #3e5d50;
+        margin: 15px 0;
+      }
+
+      .tick {
+        background: #d9ebde;
+        color: var(--green);
+        border-radius: 50%;
+        width: 27px;
+        height: 27px;
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        flex-shrink: 0;
+      }
+
+      .panel {
+        background: var(--white);
+        border: 1px solid #e7eee8;
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+        padding: clamp(24px, 4vw, 42px);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .panel:before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto;
+        height: 5px;
+        background: linear-gradient(90deg, #176b52, #8fc4a4);
+      }
+
+      .step {
+        font-size: 12px;
+        color: var(--green);
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin: 8px 0 12px;
+      }
+
+      .panel h2 {
+        font-size: 27px;
+        letter-spacing: -0.04em;
+        line-height: 1.2;
+        margin: 0 0 12px;
+      }
+
+      .sub {
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.7;
+        margin: 0 0 25px;
+      }
+
+      .reward {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        background: var(--mint);
+        padding: 18px 20px;
+        border: 1px solid #d9e9dd;
+        border-radius: 16px;
+        margin: 22px 0;
+      }
+
+      .reward span {
+        font-size: 13px;
+        color: #456a58;
+      }
+
+      .reward strong {
+        font-size: 24px;
+        color: var(--green);
+        letter-spacing: -0.04em;
+        white-space: nowrap;
+      }
+
+      .label {
+        display: block;
+        font-size: 13px;
+        font-weight: 750;
+        margin-bottom: 10px;
+      }
+
+      .phone {
+        display: flex;
+        align-items: center;
+        border: 1.5px solid #cbd9d0;
+        border-radius: 13px;
+        overflow: hidden;
+        transition: 0.2s;
+      }
+
+      .phone:focus-within {
+        border-color: var(--green);
+        box-shadow: 0 0 0 4px #e9f5ed;
+      }
+
+      .dial {
+        padding: 16px 13px;
+        background: #f7faf7;
+        border-right: 1px solid var(--line);
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .phone input {
+        border: 0;
+        outline: 0;
+        width: 100%;
+        min-width: 0;
+        padding: 16px 13px;
+        background: transparent;
+        color: var(--ink);
+      }
+
+      .hint {
+        font-size: 12px;
+        color: var(--muted);
+        line-height: 1.6;
+        margin: 10px 0 20px;
+      }
+
+      .btn {
+        width: 100%;
+        border: 0;
+        border-radius: 13px;
+        background: var(--green);
+        color: white;
+        min-height: 54px;
+        font-weight: 750;
+        transition: 0.2s;
+      }
+
+      .btn:hover:not(:disabled) {
+        background: var(--green-dark);
+        transform: translateY(-1px);
+      }
+
+      .btn.secondary {
+        background: #eef5f0;
+        color: var(--green);
+        margin-top: 10px;
+      }
+
+      .status {
+        border-radius: 13px;
+        padding: 15px 16px;
+        font-size: 14px;
+        line-height: 1.6;
+        background: #f1f6f2;
+        color: #315844;
+        margin: 16px 0;
+      }
+
+      .status.error {
+        background: #fff0ee;
+        color: var(--danger);
+      }
+
+      .status.warn {
+        background: #fff6e5;
+        color: #79500b;
+      }
+
+      .icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 18px;
+        background: var(--mint);
+        color: var(--green);
+        display: grid;
+        place-items: center;
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+
+      .icon.error {
+        background: #fff0ee;
+        color: var(--danger);
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      .spinner {
+        width: 30px;
+        height: 30px;
+        border: 3px solid #d9e9dd;
+        border-top-color: var(--green);
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+        margin-bottom: 20px;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .footer {
+        border-top: 1px solid #dfe7df;
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        flex-wrap: wrap;
+        font-size: 12px;
+        color: #77877d;
+      }
+
+      .tiny {
+        font-size: 12px;
+        color: var(--muted);
+        line-height: 1.6;
+        text-align: center;
+        margin: 18px 0 0;
+      }
+
+      .app-link {
+        display: inline-block;
+        margin-top: 14px;
+        font-size: 13px;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .screen {
+        animation: enter 0.25s ease;
+      }
+
+      @keyframes enter {
+        from {
+          opacity: 0.4;
+          transform: translateY(7px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 800px) {
+        .wrap {
+          padding: 18px 18px 24px;
+        }
+
+        .layout {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 22px;
+          min-height: 0;
+          padding: 38px 0;
+        }
+
+        .intro {
+          padding: 0;
+        }
+
+        .intro h1 {
+          font-size: 39px;
+          margin-bottom: 12px;
+        }
+
+        .intro p {
+          font-size: 14px;
+          line-height: 1.7;
+          margin-bottom: 0;
+        }
+
+        .feature-list {
+          display: none;
+        }
+
+        .panel {
+          border-radius: 22px;
+          padding: 26px 22px;
+        }
+
+        .panel h2 {
+          font-size: 24px;
+        }
+
+        .secure {
+          font-size: 11px;
+        }
+
+        .brand {
+          font-size: 18px;
+        }
+
+        .footer {
+          margin-top: 24px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .reward {
+          flex-wrap: wrap;
+        }
+
+        .reward strong {
+          font-size: 22px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *:before,
+        *:after {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <!-- EN-TÊTE -->
+      <header class="top">
+        <div class="brand">
+          <div class="brandmark" aria-hidden="true">✓</div>
+          TRUEBOND
+        </div>
+
+        <div class="secure">🔒 Accès sécurisé</div>
+      </header>
+
+      <main class="layout">
+        <!-- PRÉSENTATION DE L'INVITATION -->
+        <section class="intro">
+          <div class="eyebrow">Une invitation personnelle</div>
+
+          <h1>
+            La confiance<br />
+            commence ici.
+          </h1>
+
+          <p>
+            Vous avez reçu une invitation TRUEBOND pour identifier la personne
+            que vous pensez être votre partenaire. Répondez en quelques
+            instants, directement depuis votre navigateur.
+          </p>
+
+          <div class="feature-list">
+            <div class="feature">
+              <span class="tick">✓</span>
+              Aucun compte requis pour répondre
+            </div>
+
+            <div class="feature">
+              <span class="tick">✓</span>
+              Une expérience simple et confidentielle
+            </div>
+
+            <div class="feature">
+              <span class="tick">✓</span>
+              Une réponse enregistrée de façon sécurisée
+            </div>
+          </div>
+        </section>
+
+        <!-- PANNEAU PRINCIPAL -->
+        <section class="panel" aria-live="polite">
+          <!-- CHARGEMENT -->
+          <div id="loading" class="screen">
+            <div class="spinner" aria-hidden="true"></div>
+
+            <div class="step">Vérification</div>
+
+            <h2>Nous préparons votre invitation</h2>
+
+            <p class="sub">
+              Vérification du lien et de la disponibilité du test…
+            </p>
+          </div>
+
+          <!-- FORMULAIRE BÉNÉFICIAIRE -->
+          <div id="formScreen" class="screen hidden">
+            <div class="step">Votre test TRUEBOND</div>
+
+            <h2>Qui pensez-vous être votre partenaire ?</h2>
+
+            <p class="sub">
+              Vous avez été invité(e) à renseigner le numéro de téléphone de la
+              personne que vous pensez être votre partenaire. Votre réponse sera
+              vérifiée de manière sécurisée.
+            </p>
+
+            <!-- RÉCOMPENSE DYNAMIQUE -->
+            <div class="reward">
+              <span> Récompense annoncée </span>
+
+              <strong id="reward">—</strong>
+            </div>
+
+            <!-- FORMULAIRE -->
+            <form id="answerForm" novalidate>
+              <label class="label" for="phone">
+                Numéro de téléphone de votre partenaire présumé(e)
+              </label>
+
+              <div class="phone">
+                <span class="dial">🇨🇲 +237</span>
+
+                <input
+                  id="phone"
+                  type="tel"
+                  inputmode="numeric"
+                  autocomplete="off"
+                  placeholder="6XX XXX XXX"
+                  maxlength="18"
+                  required
+                  aria-describedby="phoneHelp"
+                />
+              </div>
+
+              <p id="phoneHelp" class="hint">
+                Saisissez le numéro de téléphone de la personne que vous pensez
+                être votre partenaire.
+              </p>
+
+              <div
+                id="formMessage"
+                class="status error hidden"
+                role="alert"
+              ></div>
+
+              <button class="btn" id="submitBtn" type="submit">
+                Valider ma réponse →
+              </button>
+            </form>
+
+            <p class="tiny">
+              Une seule réponse peut être enregistrée pour cette invitation.
+            </p>
+          </div>
+
+          <!-- RÉSULTAT DU TEST -->
+          <div id="resultScreen" class="screen hidden">
+            <div id="resultIcon" class="icon">✓</div>
+
+            <div class="step">Résultat du test</div>
+
+            <h2 id="resultTitle">Réponse enregistrée</h2>
+
+            <p class="sub" id="resultText"></p>
+
+            <div class="status">
+              Cette invitation ne peut plus recevoir de nouvelle réponse.
+            </div>
+          </div>
+
+          <!-- ERREUR D'INVITATION -->
+          <div id="errorScreen" class="screen hidden">
+            <div class="icon error">!</div>
+
+            <div class="step">Invitation indisponible</div>
+
+            <h2 id="errorTitle">Impossible d'ouvrir ce lien</h2>
+
+            <p class="sub" id="errorText">
+              Vérifiez votre invitation et réessayez.
+            </p>
+
+            <button class="btn secondary" id="retryBtn" type="button">
+              Réessayer
+            </button>
+          </div>
+
+          <!-- RÉSULTAT INCERTAIN -->
+          <div id="uncertainScreen" class="screen hidden">
+            <div class="icon">?</div>
+
+            <div class="step">Vérification nécessaire</div>
+
+            <h2>Votre réponse a peut-être été reçue</h2>
+
+            <p class="sub">
+              Nous n'avons pas pu confirmer le résultat de votre envoi. Pour
+              éviter une double réponse, ne soumettez pas à nouveau. Contactez
+              la personne qui vous a invité pour vérifier le statut du test.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <!-- PIED DE PAGE -->
+      <footer class="footer">
+        <span> © <span id="year"></span> TRUEBOND. Tous droits réservés. </span>
+
+        <span> Votre confiance, notre priorité. </span>
+      </footer>
+    </div>
+
+    <!-- SCRIPTS EXISTANTS -->
+    <script src="/config.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
